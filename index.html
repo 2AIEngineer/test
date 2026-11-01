@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Café Racines — Torréfacteur & Café de quartier</title>
+<meta name="description" content="Café Racines : cafés de spécialité, pâtisseries maison et ambiance chaleureuse.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #f6efe4;
+    --paper: #fffaf1;
+    --espresso: #2a1a12;
+    --roast: #5b3a29;
+    --caramel: #c07a3b;
+    --line: #e3d6c1;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: Inter, system-ui, sans-serif;
+    background: var(--cream);
+    color: var(--espresso);
+    line-height: 1.6;
+  }
+  h1, h2, h3 { font-family: Fraunces, Georgia, serif; line-height: 1.1; }
+  a { color: inherit; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+  header {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(246, 239, 228, .92); backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .logo { font-family: Fraunces, serif; font-weight: 700; font-size: 1.3rem; text-decoration: none; }
+  nav a { margin-left: 22px; text-decoration: none; font-weight: 500; font-size: .95rem; }
+  nav a:hover { color: var(--caramel); }
+
+  .hero {
+    background:
+      linear-gradient(rgba(42,26,18,.62), rgba(42,26,18,.72)),
+      url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1800&q=70") center/cover,
+      var(--roast);
+    color: var(--paper);
+    padding: 130px 0 120px;
+    text-align: center;
+  }
+  .hero h1 { font-size: clamp(2.6rem, 7vw, 4.8rem); margin-bottom: 18px; }
+  .hero p { max-width: 520px; margin: 0 auto 32px; font-size: 1.15rem; opacity: .92; }
+  .btn {
+    display: inline-block; padding: 13px 28px; border-radius: 999px;
+    background: var(--caramel); color: #fff; font-weight: 600; text-decoration: none;
+    transition: transform .15s, background .15s;
+  }
+  .btn:hover { background: #a96729; transform: translateY(-2px); }
+
+  section { padding: 84px 0; }
+  .eyebrow { color: var(--caramel); font-weight: 600; letter-spacing: .12em; text-transform: uppercase; font-size: .8rem; }
+  h2 { font-size: clamp(1.9rem, 4vw, 2.7rem); margin: 8px 0 20px; }
+
+  .about { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+  .about img { width: 100%; height: 380px; object-fit: cover; border-radius: 18px; background: var(--line); }
+  .about p + p { margin-top: 14px; }
+
+  .menu-bg { background: var(--paper); border-block: 1px solid var(--line); }
+  .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 32px; }
+  .menu-grid h3 { font-size: 1.4rem; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid var(--caramel); }
+  .item { display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-bottom: 1px dashed var(--line); }
+  .item span:first-child strong { display: block; }
+  .item small { color: var(--roast); opacity: .8; }
+  .price { font-weight: 600; white-space: nowrap; color: var(--caramel); }
+
+  .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 28px; }
+  .gallery img { width: 100%; height: 240px; object-fit: cover; border-radius: 14px; background: var(--line); }
+
+  .contact { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+  .hours { list-style: none; padding: 0; }
+  .hours li { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--line); }
+  .box { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 28px; }
+  .box p { margin-bottom: 10px; }
+
+  footer { background: var(--espresso); color: #cdbba5; text-align: center; padding: 28px 0; font-size: .9rem; }
+
+  @media (max-width: 760px) {
+    .about, .contact { grid-template-columns: 1fr; }
+    nav a { margin-left: 14px; }
+    section { padding: 60px 0; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">☕ Café Racines</a>
+    <nav>
+      <a href="#apropos">À propos</a>
+      <a href="#carte">La carte</a>
+      <a href="#contact">Venir nous voir</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <h1>Un café, une pause,<br>une histoire.</h1>
+      <p>Cafés de spécialité torréfiés avec soin, pâtisseries maison et un coin chaleureux pour ralentir.</p>
+      <a class="btn" href="#carte">Découvrir la carte</a>
+    </div>
+  </div>
+
+  <section id="apropos">
+    <div class="wrap about">
+      <div>
+        <span class="eyebrow">Notre histoire</span>
+        <h2>Le goût du café bien fait</h2>
+        <p>Au Café Racines, nous sélectionnons des grains auprès de petits producteurs et les torréfions en petites quantités pour préserver toute leur richesse aromatique.</p>
+        <p>Que vous veniez pour un expresso express, un moment de travail au calme ou un brunch entre amis, notre équipe vous accueille comme à la maison.</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=900&q=70" alt="Intérieur chaleureux du café" loading="lazy">
+    </div>
+  </section>
+
+  <section id="carte" class="menu-bg">
+    <div class="wrap">
+      <span class="eyebrow">La carte</span>
+      <h2>Nos incontournables</h2>
+      <div class="menu-grid">
+        <div>
+          <h3>Boissons chaudes</h3>
+          <div class="item"><span><strong>Expresso</strong><small>Mélange maison, notes de cacao</small></span><span class="price">1 500 F</span></div>
+          <div class="item"><span><strong>Cappuccino</strong><small>Mousse de lait onctueuse</small></span><span class="price">2 500 F</span></div>
+          <div class="item"><span><strong>Latte caramel</strong><small>Sirop caramel fait maison</small></span><span class="price">3 000 F</span></div>
+          <div class="item"><span><strong>Thé & infusions</strong><small>Sélection de feuilles entières</small></span><span class="price">2 000 F</span></div>
+        </div>
+        <div>
+          <h3>Boissons fraîches</h3>
+          <div class="item"><span><strong>Café glacé</strong><small>Infusion à froid 12 h</small></span><span class="price">2 500 F</span></div>
+          <div class="item"><span><strong>Jus pressé du jour</strong><small>Fruits de saison</small></span><span class="price">2 500 F</span></div>
+          <div class="item"><span><strong>Smoothie</strong><small>Mangue, banane ou fruits rouges</small></span><span class="price">3 000 F</span></div>
+        </div>
+        <div>
+          <h3>À grignoter</h3>
+          <div class="item"><span><strong>Croissant beurre</strong><small>Feuilleté pur beurre</small></span><span class="price">1 000 F</span></div>
+          <div class="item"><span><strong>Brownie chocolat</strong><small>Noix & chocolat noir</small></span><span class="price">2 000 F</span></div>
+          <div class="item"><span><strong>Sandwich du chef</strong><small>Pain frais, garniture du jour</small></span><span class="price">3 500 F</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="galerie">
+    <div class="wrap">
+      <span class="eyebrow">Ambiance</span>
+      <h2>Un lieu où l'on se sent bien</h2>
+      <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=70" alt="Tasse de café" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1559496417-e7f25cb247f3?auto=format&fit=crop&w=600&q=70" alt="Barista au travail" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=70" alt="Latte art" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1481833761820-0509d3217039?auto=format&fit=crop&w=600&q=70" alt="Pâtisseries" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="padding-top:0">
+    <div class="wrap contact">
+      <div>
+        <span class="eyebrow">Horaires</span>
+        <h2>Venez nous voir</h2>
+        <ul class="hours">
+          <li><span>Lundi – Vendredi</span><strong>7h00 – 19h00</strong></li>
+          <li><span>Samedi</span><strong>8h00 – 21h00</strong></li>
+          <li><span>Dimanche</span><strong>8h00 – 14h00</strong></li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3 style="margin-bottom:16px">Nous trouver</h3>
+        <p>📍 12 rue du Marché, Ouagadougou</p>
+        <p>📞 +226 00 00 00 00</p>
+        <p>✉️ bonjour@cafe-racines.example</p>
+        <p>📷 @cafe.racines</p>
+        <a class="btn" style="margin-top:12px" href="tel:+22600000000">Réserver une table</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 Café Racines — Fait avec ❤️ et beaucoup de café.</footer>
+
+</body>
+</html>
